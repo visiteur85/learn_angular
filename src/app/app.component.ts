@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import {Component} from '@angular/core';
 
 
 @Component({
@@ -9,10 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-isAppLoading = false;
+  title = "instagram";
+  text=''
 
-constructor() {
-  setTimeout(()=>{
-    this.isAppLoading = true
-  },1000)
-}}
+
+  changeTitleHandler = () => {
+    this.title = 'it-incubator'
+  };
+
+  changeInputHandler = (event:Event)=> {
+    console.log((event.currentTarget as HTMLInputElement).value)
+    this.text = (event.currentTarget as HTMLInputElement).value
+  }
+
+
+}

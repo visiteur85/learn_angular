@@ -1,1 +1,8 @@
-<button [disabled]="isAppLoading">change</button>
+<div>{{title}}</div>
+<button (click)='changeTitleHandler()'>Change title</button>
+
+<hr>
+<div>{{text}}</div>
+<input type="text" (input)="changeInputHandler($event)"/>
+
+
