@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 
-interface IUser  {
-  name:string,
-  age:number
 
-}
 
 @Component({
   selector: 'app-root',
@@ -12,11 +8,11 @@ interface IUser  {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Angular_learn';
 
-  first = 'instagram';
-  obj:IUser = {
-    name: 'Pavel',
-    age:34
-  }
-}
+isAppLoading = false;
+
+constructor() {
+  setTimeout(()=>{
+    this.isAppLoading = true
+  },1000)
+}}
