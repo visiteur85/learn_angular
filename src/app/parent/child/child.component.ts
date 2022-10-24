@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Address} from "../parent.component";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+
 
 @Component({
   selector: 'inst-child',
@@ -7,8 +7,12 @@ import {Address} from "../parent.component";
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent {
-  name = "Lesha"
-  @Input() surName?:string
-  @Input() adress?:Address
+
+  @Output() sendGradeEvent = new EventEmitter<number>()
+  sendGradehandler() {
+
+    const Math = 5
+    this.sendGradeEvent.emit(Math)
+  }
 
 }
