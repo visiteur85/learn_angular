@@ -8,11 +8,11 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class ChildComponent {
 
-  @Output() sendGradeEvent = new EventEmitter<number>()
+  @Output() sendGradeEvent = new EventEmitter<string>()
+  inputGrade = ''
   sendGradehandler() {
 
-    const Math = 5
-    this.sendGradeEvent.emit(Math)
+    this.sendGradeEvent.emit(this.inputGrade)
   }
 
 }

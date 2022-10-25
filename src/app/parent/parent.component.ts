@@ -7,10 +7,10 @@ import {Component} from '@angular/core';
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent {
-  math?:number
+  grades: string[] = ["math: 5", "eng:3"]
 
-  getGrade(value:number) {
-    this.math = value
+  getGrade(value:string) {
+    this.grades.push(value)
 
   }
 }
