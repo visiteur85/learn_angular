@@ -1,4 +1,4 @@
 <div>
   <inst-child (sendGradeEvent)="getGrade($event)"></inst-child>
-  <div>{{grades | json}}</div>
+  <div *ngFor="let item  of grades">{{item}}</div>
 </div>
